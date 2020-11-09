@@ -1,0 +1,11 @@
+<h1>Result</h1>
+
+<% if @built %>
+  <% if @english %>
+    <p>Congratulations! <%= @word %> is a valid English word!</p>
+  <% else %>
+    <p>Sorry but <%= @word %> does not seem to be a valid English word</p>
+  <% end %>
+<% else %>
+  <p>Sorry but <%= @word %> can not be built out of <%= params[:letters] %></p>
+<% end %>
